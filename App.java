@@ -7,7 +7,7 @@ public class App {
     public static void main(String[] args) throws Exception{
  
         File inputTekst = new File("tekst.txt"); //assigner filen tekst.txt
-        Scanner sc = new Scanner(inputTekst); 
+        Scanner sc = new Scanner(inputTekst, "UTF-8"); 
         ArrayList<String> arr = new ArrayList<>();
 
         while(sc.hasNext()){ //Fylder arraylisten med individuelle strings fra teksten
@@ -18,7 +18,7 @@ public class App {
 
             String[] stringArray = new String[arr.size()];
 
-            for(int i = 0; i <= arr.size(); i++){
+            for(int i = 0; i < arr.size(); i++){
 
                 stringArray[i] = arr.get(i);
     
