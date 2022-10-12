@@ -16,7 +16,7 @@ public class App {
             arr.add(string);
          }
 
-            String[] stringArray = new String[arr.size()];
+            String[] stringArray = new String[arr.size()]; //Laver nyt stringarray
 
             for(int i = 0; i < arr.size(); i++){
 
