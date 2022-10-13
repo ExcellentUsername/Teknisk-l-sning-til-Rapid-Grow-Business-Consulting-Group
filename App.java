@@ -7,10 +7,24 @@ import javax.swing.*;
 
 public class App {
     public static void main(String[] args) throws Exception{
+
+         //GUI Handler
+         JFrame window = new JFrame("GUI"); 
+         GUI thisGUI = new GUI();
+         thisGUI.paintComponent();
+         window.add(thisGUI);
+         window.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+         window.setVisible(true); 
+         window.pack();
+
+
  
         File inputTekst = new File("tekst.txt"); //assigner filen tekst.txt
         Scanner sc = new Scanner(inputTekst, "UTF-8"); 
         ArrayList<String> arr = new ArrayList<>();
+
+        thisGUI.setInput(inputTekst);
+
 
         while(sc.hasNext()){ //Fylder arraylisten med individuelle strings fra teksten
             String string = sc.next();
@@ -28,12 +42,6 @@ public class App {
 
             System.out.println(Arrays.toString(stringArray));
 
-            //GUI Handler
-            JFrame window = new JFrame("GUI"); 
-            window.add( new GUI());
-            window.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-            window.setSize(500, 250);;
-            window.setVisible(true); 
-            window.repaint(); 
+
     }
 }
