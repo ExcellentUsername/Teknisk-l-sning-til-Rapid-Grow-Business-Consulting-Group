@@ -2,6 +2,8 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.*; 
+import javax.swing.*;
+
 
 public class App {
     public static void main(String[] args) throws Exception{
@@ -26,6 +28,11 @@ public class App {
 
             System.out.println(Arrays.toString(stringArray));
 
-
+            //GUI Handler
+            JFrame window = new JFrame("GUI"); 
+            window.add( new GUI());
+            window.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+            window.setSize(500,200);
+            window.setVisible(true);  
     }
 }
