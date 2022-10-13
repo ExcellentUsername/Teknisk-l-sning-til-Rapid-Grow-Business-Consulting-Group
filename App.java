@@ -32,7 +32,8 @@ public class App {
             JFrame window = new JFrame("GUI"); 
             window.add( new GUI());
             window.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-            window.setSize(500,200);
-            window.setVisible(true);  
+            window.setSize(500, 250);;
+            window.setVisible(true); 
+            window.repaint(); 
     }
 }
