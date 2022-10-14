@@ -5,7 +5,6 @@ public class TranslateArray {
     //Initialisering af 2d string array
 
     ArrayList<ArrayList<String>> TranslateArray = new ArrayList<ArrayList<String>>();  
-    
     ArrayList<String> input = new ArrayList<String>();
 
     ArrayList<String> Translation = new ArrayList<String>();

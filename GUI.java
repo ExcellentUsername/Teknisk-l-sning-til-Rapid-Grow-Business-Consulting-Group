@@ -12,6 +12,7 @@ import javax.swing.border.LineBorder;
 
 public class GUI extends JPanel
 {   
+
     JButton Convert = new JButton();
     JTextArea txtInputarea = new JTextArea("Input");
     JScrollPane txtInput = new JScrollPane(txtInputarea);
