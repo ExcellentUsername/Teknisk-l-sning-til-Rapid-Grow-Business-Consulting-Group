@@ -2,6 +2,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.Scanner;
 import javax.swing.JFrame;
@@ -70,6 +71,15 @@ public void actionPerformed(ActionEvent event){
     }
 
     thisGUI.setOutput(output);
+    try {
+        thisGUI.writeStringToFile(output);
+    } catch (FileNotFoundException e) {
+        // TODO Auto-generated catch block
+        e.printStackTrace();
+    } catch (UnsupportedEncodingException e) {
+        // TODO Auto-generated catch block
+        e.printStackTrace();
+    }
 }
 
 

@@ -3,6 +3,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
@@ -63,9 +64,12 @@ public class GUI extends JPanel
         txtOutputarea.setText(Output);
     }
 
-    static void writeStringToFile(String string) throws FileNotFoundException{
-        PrintWriter out = new PrintWriter(new File("newtext.txt"));
-        out.print(string);
+    //Creating a new txt file that has been "businefyed" 
+    void writeStringToFile(String string) throws FileNotFoundException, UnsupportedEncodingException{
+        try (PrintWriter writer = new PrintWriter("BusinefyedText.txt", "UTF-8")) {
+            System.out.println("ahhh");
+            writer.print(string);
+        }
     }
 
     
