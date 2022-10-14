@@ -112,6 +112,69 @@ public class TranslateArray {
 
         Translation.add("udføre exit strategi");
 
+        input.add("præcist");
+
+        Translation.add("eksakt");
+
+
+        input.add("kage");
+
+        Translation.add("nødvendig fødevare");
+
+
+        input.add("vand");
+
+        Translation.add("H2O");
+
+
+        input.add("folkeskole");
+
+        Translation.add("gratis børnepasning");
+
+
+        input.add("nu");
+
+        Translation.add("at this time");
+
+
+        input.add("afstand");
+
+        Translation.add("distance");
+
+
+        input.add("hurtigt");
+
+        Translation.add("agilt");
+
+
+        input.add("skat");
+
+        Translation.add("tyveri mod ærlige borgere");
+
+
+        input.add("indtjening");
+
+        Translation.add("return on investment");
+
+
+        input.add("jakkesæt");
+
+        Translation.add("casual wear");
+
+
+        input.add("hej");
+
+        Translation.add("greetings and salutations");
+
+
+        input.add("kaffe");
+
+        Translation.add("business benzin");
+
+
+        input.add("dyr");
+
+        Translation.add("kreaturer");
 
     }
 
