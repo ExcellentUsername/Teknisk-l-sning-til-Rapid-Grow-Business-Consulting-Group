@@ -13,6 +13,21 @@ public class App {
         Scanner sc = new Scanner(inputTekst, "UTF-8");// UTF-8 så æ, ø & å kan bruges
 
         while (sc.hasNext()) { // Fylder arraylisten med individuelle strings fra teksten
+
+
+         //GUI Handler
+         JFrame window = new JFrame("GUI"); 
+         GUI thisGUI = new GUI();
+         thisGUI.paintComponent();
+         window.add(thisGUI);
+         window.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+         window.setVisible(true); 
+         window.pack();
+
+        thisGUI.setInput(inputTekst);
+
+
+        while(sc.hasNext()){ //Fylder arraylisten med individuelle strings fra teksten
             String string = sc.next();
 
             tekstArray.add(string);
@@ -43,4 +58,5 @@ public class App {
 
     }
 
+}
 }
