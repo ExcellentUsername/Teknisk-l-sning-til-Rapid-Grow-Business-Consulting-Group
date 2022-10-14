@@ -1,6 +1,8 @@
 import java.awt.*;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
@@ -9,7 +11,7 @@ import javax.swing.border.LineBorder;
 
 
 public class GUI extends JPanel
-{
+{   
     JButton Convert = new JButton();
     JTextArea txtInputarea = new JTextArea("Input");
     JScrollPane txtInput = new JScrollPane(txtInputarea);
@@ -21,6 +23,7 @@ public class GUI extends JPanel
     public void paintComponent()
     {
         Color color = new java.awt.Color(200, 200, 220);
+        //customizing the components
         this.setBackground(color);
         txtInput.setPreferredSize(new Dimension(300, 300));
         txtInput.setBorder(new LineBorder(color, 10));
@@ -38,7 +41,8 @@ public class GUI extends JPanel
         top.setHorizontalAlignment(JLabel.CENTER);
         top.setPreferredSize(new Dimension(10,50));
 
-        //layout
+        //layout==========
+        //adding the components to the border layout
         this.setLayout(borderLayout1);
         this.add(Convert, BorderLayout.CENTER);
         this.add(txtInput, BorderLayout.WEST);
@@ -46,9 +50,10 @@ public class GUI extends JPanel
         this.add(top, BorderLayout.NORTH);
     }
 
-
+    //setter and getter functions for the text fields
      void setInput(File inputTekst) throws IOException
     {
+        //adding the given text file as a string to the input textfield
         txtInputarea.setText(new String(Files.readAllBytes(Paths.get(inputTekst.getPath())), "UTF-8"));
     }
 
@@ -56,6 +61,13 @@ public class GUI extends JPanel
     {
         txtOutputarea.setText(Output);
     }
+
+    static void writeStringToFile(String string) throws FileNotFoundException{
+        PrintWriter out = new PrintWriter(new File("newtext.txt"));
+        out.print(string);
+    }
+
+    
 }
 
 

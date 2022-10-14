@@ -11,9 +11,9 @@ public class App {
          //GUI Handler
          JFrame window = new JFrame("GUI"); 
          GUI thisGUI = new GUI();
-         thisGUI.paintComponent();
+         thisGUI.paintComponent(); //adding the components to the Jframe before pack(), for pack() to work
          window.add(thisGUI);
-         window.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+         window.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); //standard close function
          window.setVisible(true); 
          window.pack();
 
